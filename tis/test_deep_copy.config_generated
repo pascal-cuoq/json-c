@@ -1,0 +1,19 @@
+[
+    {
+        "compilation_database": [
+            "build"
+        ],
+        "files": [
+            "../tests/test_deep_copy.c",
+            "../json_tokener.c",
+            "../printbuf.c",
+            "../json_object.c",
+            "../linkhash.c",
+            "../json_util.c",
+            "../arraylist.c"
+        ],
+        "raw_options": {
+            "-val-printf-singleton-pointers": true
+        }
+    }
+]

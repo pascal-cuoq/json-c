@@ -87,3 +87,11 @@
 /libjson-c.a
 /libjson-c.so
 /libjson-c.so.*
+
+# tis-prepare
+**/*_time.txt
+*.csv
+*_config.json
+tests/*.csv
+tests/*_time.txt
+tests/*_config.json

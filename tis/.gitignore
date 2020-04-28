@@ -1,0 +1,12 @@
+*.config_generated.json
+__vfs-*.[ch]
+*.state
+*.csv
+*.diff
+*.log
+*.res
+xunit.xml
+Jenkinsfile.new
+build
+!build/compile_commands.json
+!build/*.h

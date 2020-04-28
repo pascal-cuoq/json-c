@@ -34,7 +34,12 @@
 /* hash functions */
 static unsigned long lh_char_hash(const void *k);
 static unsigned long lh_perllike_str_hash(const void *k);
+#ifdef __TRUSTINSOFT_HELPER__
+// select a simpler hash function for TrustInSoft Analyzer.
+static lh_hash_fn *char_hash_fn = lh_perllike_str_hash;
+#else
 static lh_hash_fn *char_hash_fn = lh_char_hash;
+#endif
 
 /* comparison functions */
 int lh_char_equal(const void *k1, const void *k2);

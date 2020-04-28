@@ -122,6 +122,10 @@ struct json_tokener *json_tokener_new_ex(int depth)
 	tok = (struct json_tokener *)calloc(1, sizeof(struct json_tokener));
 	if (!tok)
 		return NULL;
+#ifdef __TRUSTINSOFT_BUGFIX__
+        if (depth <= 0)
+          return NULL;
+#endif
 	tok->stack = (struct json_tokener_srec *)calloc(depth, sizeof(struct json_tokener_srec));
 	if (!tok->stack)
 	{

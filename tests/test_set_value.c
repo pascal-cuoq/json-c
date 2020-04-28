@@ -91,7 +91,10 @@ int main(int argc, char **argv)
 	tmp = json_tokener_parse("1.234");
 	json_object_set_double(tmp, 12.3);
 	const char *serialized = json_object_to_json_string(tmp);
+#ifndef __TRUSTINSOFT_HELPER__
+        // avoid printing to stderr to be able to compare results
 	fprintf(stderr, "%s\n", serialized);
+#endif
 	assert(strncmp(serialized, "12.3", 4) == 0);
 	json_object_put(tmp);
 	printf("PARSE AND SET PASSED\n");
