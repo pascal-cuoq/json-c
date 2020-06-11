@@ -167,7 +167,11 @@ for name in $test_names ; do
     rm -f "$name.log"
   fi
 
-  cat ${config}_generated | tail -n +3 | head -n -2 >> my_tis.config
+  # Skip first two lines.
+  # Skip last two lines.
+  # Remove one '../' in each line.
+  # Replace all 'build' by 'tis/build'
+  cat ${config}_generated | tail -n +3 | head -n -2 | sed 's/..\///' | sed 's/build/tis\/build/' >> my_tis.config
 
 done
 
