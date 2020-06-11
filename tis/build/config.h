@@ -6,7 +6,7 @@
 /* #undef ENABLE_THREADING */
 
 /* Define if .gnu.warning accepts long strings. */
-#define HAS_GNU_WARNING_LONG "@@"
+/* #undef HAS_GNU_WARNING_LONG */
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #define HAVE_DLFCN_H

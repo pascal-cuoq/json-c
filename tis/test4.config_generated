@@ -7,7 +7,8 @@
             "../tests/test4.c",
             "../json_tokener.c",
             "../printbuf.c",
-            "../json_object.c"
+            "../json_object.c",
+            "../linkhash.c"
         ]
     }
 ]
