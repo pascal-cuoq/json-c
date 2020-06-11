@@ -88,7 +88,6 @@ if [[ $do_clean -ne 0 ]] ; then
   rm -f ./*.state ./*.log ./*.csv ./*.res ./*.diff
   rm -f ./*.config_generated.json
   rm -f __vfs-*.[ch]
-  # rm -f Jenkinsfile.new xunit.xml
 
   git_clean=$(git clean -nxd)
   if [ -n "$git_clean" ] ; then
@@ -148,12 +147,33 @@ for name in $test_names ; do
       -- --interpreter)
     ok='Successfully completed'
     if [[ ! ( "$out" =~ $ok ) ]] ; then
-      echo "Failed to compute ${config}_generated"
+      echo " Failed to compute ${config}_generated"
       exit 1
     fi
-    echo "ok."
+    echo " ok."
     rm -f "$name.log"
   fi
 
 done
 #-------------------------------------------------------------------------------
+
+# Remove stuff useless for TiS-CI
+clean_stuff() {
+  rm -f ./*.c_config.json
+  rm -f ./*.c_functions.csv
+  rm -f ./*.c_time.txt
+  rm -f ./*.c_variables.csv
+}
+
+pushd ..
+clean_stuff # /
+pushd apps
+clean_stuff # /apps
+popd
+pushd tests # /tests
+clean_stuff
+popd
+popd
+
+rm -f ./*.config_generated.json
+rm -f __vfs-*.[ch]
