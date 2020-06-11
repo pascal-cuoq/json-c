@@ -144,12 +144,12 @@ for name in $test_names ; do
 
   # my_tis.config
   if [[ $fst_test -ne 1 ]] ; then
-    echo "  }," >> my_tis.config
+    echo "    }," >> my_tis.config
   fi
   fst_test=0
-  echo "  {" >> my_tis.config
-  echo "    \"name\": \"$name\"," >> my_tis.config
-  echo "    \"include\": \"tis/${config}_generated\"" >> my_tis.config
+  echo "    {" >> my_tis.config
+  echo "        \"name\": \"$name\"," >> my_tis.config
+  # echo "        \"include\": \"tis/${config}_generated\"" >> my_tis.config
 
   #-----------------------------------------------------------------------------
   # Step 3a: generate the test.config_generated file from test.config
@@ -167,9 +167,11 @@ for name in $test_names ; do
     rm -f "$name.log"
   fi
 
+  cat ${config}_generated | tail -n +3 | head -n -2 >> my_tis.config
+
 done
 
-echo "  }" >> my_tis.config
+echo "    }" >> my_tis.config
 echo "]" >> my_tis.config
 
 #-------------------------------------------------------------------------------
