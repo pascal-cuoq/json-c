@@ -8,9 +8,6 @@ do_clean=0
 do_cc=0
 do_symbols=0
 do_prepare=0
-do_run=0
-do_filter=1
-do_diff=1
 test_names=""
 
 usage() {
@@ -35,8 +32,6 @@ Options:
 -p      generate the configuration files even if they exist already.
         The default is to generate them only if needed.
 -q      set the verbosity to 0 (quiet).
--r      run the analysis even if the results exist already.
-        The default is to run the analysis only if needed.
 -s      build the symbol table and exit.
 -v      increase the verbosity.
 END
@@ -53,7 +48,6 @@ while [[ $# -gt 0 ]] ; do
     -l) echo "${all_tests[*]}" ; exit 0 ;;
     -p) do_prepare=1 ; shift ;;
     -q) verbose=0; shift ;;
-    -r) do_run=1 ; shift ;;
     -s) do_symbols=1; shift ;;
     -v) verbose=$(( verbose + 1 )) ; shift ;;
     *)
@@ -94,7 +88,7 @@ if [[ $do_clean -ne 0 ]] ; then
   rm -f ./*.state ./*.log ./*.csv ./*.res ./*.diff
   rm -f ./*.config_generated.json
   rm -f __vfs-*.[ch]
-  rm -f Jenkinsfile.new xunit.xml
+  # rm -f Jenkinsfile.new xunit.xml
 
   git_clean=$(git clean -nxd)
   if [ -n "$git_clean" ] ; then
@@ -161,74 +155,5 @@ for name in $test_names ; do
     rm -f "$name.log"
   fi
 
-  #-----------------------------------------------------------------------------
-  # Step 3b: run the analysis
-
-  if [[ $do_run -ne 0 || ! -f "$name.state" || ! -f "$name.log" ]]; then
-    echo -n "  analyze..."
-    TIS_ADVANCED_FLOAT=1 tis-analyzer --interpreter \
-      -tis-config-load ../tis.config -tis-config-select-by-name "$name" \
-      -save "$name.state" -info-csv-all "$name" > "$name.log"
-    echo "ok."
-    rm -f "$name.res"
-  fi
-
-  #-----------------------------------------------------------------------------
-  # Step 3c: filter the results to keep only the 'stdout' test output
-  #          TODO: it would be better to have -val-stdout (see TRUS-2101)
-
-  if [[ $do_filter -ne 0 || ! -f "$name.res" ]] ; then
-    echo -n "  filter..."
-    awk -f <(cat - <<-'END'
-	/^\[value]/ { next; }
-	/^\[kernel]/ { next; }
-	/^\[tis-mkfs]/ { next; }
-	/^\[info]/ { next; }
-	/Too many arguments/,/ *main$/ { next; }
-	/but format indicates/,/ *main$/ { next; }
-	/register_new_file_in_dirent_niy/,/ *main$/ { next; }
-	/initialization of volatile variable/ { next; }
-	/integer overflow/ { next; }
-	/overflow or underflow/ { next; }
-	/invalid return value from json_c_visit/ {
-           /* this is printed on stderr so not in .expected */
-           next ;
-           }
-	/\[time]/ { printf "\n"; exit}
-	/^$/ { c++ ; next; }
-	{ if (c == 0) printf "\n";
-          if (c >= 2) {
-            for ( ; c >= 2; c -= 2) printf "\n";
-            if (c == 1) printf "\n";
-          }
-          c = 0; printf ("%s", $0);
-        }
-END
-    ) < "$name.log" > "$name.res"
-    echo "ok."
-    rm -f "$name.diff"
-  fi
-
-  #-----------------------------------------------------------------------------
-  # Step 3d: compare the filtered results to the expected ones.
-
-  if [[ $do_diff -ne 0 || ! -f "$name.diff" ]] ; then
-    echo -n "  diff..."
-    if [ -f "$name.todo" ] ; then
-      # some differences with the expected file to be fixed
-      oracle="$name.todo"
-    elif [ -f "$name.oracle" ] ; then
-      # some differences with the expected file but they are acceptable
-      oracle="$name.oracle"
-    else
-      oracle="../tests/$name.expected"
-    fi
-    if diff "$oracle" "$name.res" > "$name.diff" ; then
-      echo "ok"
-    else
-      echo "KO."
-      echo "    See with: diff $oracle $name.res"
-    fi
-  fi
 done
 #-------------------------------------------------------------------------------
