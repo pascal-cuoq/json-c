@@ -1,0 +1,14 @@
+[
+    {
+        "compilation_database": [
+            "build"
+        ],
+        "files": [
+            "../tests/test_compare.c",
+            "../json_object.c",
+            "../printbuf.c",
+            "../arraylist.c",
+            "../linkhash.c"
+        ]
+    }
+]

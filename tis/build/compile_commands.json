@@ -1,0 +1,202 @@
+[
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/arraylist.c.o   -c ../../arraylist.c",
+  "file": "../../arraylist.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/debug.c.o   -c ../../debug.c",
+  "file": "../../debug.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/json_c_version.c.o   -c ../../json_c_version.c",
+  "file": "../../json_c_version.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/json_object.c.o   -c ../../json_object.c",
+  "file": "../../json_object.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/json_object_iterator.c.o   -c ../../json_object_iterator.c",
+  "file": "../../json_object_iterator.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/json_pointer.c.o   -c ../../json_pointer.c",
+  "file": "../../json_pointer.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/json_tokener.c.o   -c ../../json_tokener.c",
+  "file": "../../json_tokener.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/json_util.c.o   -c ../../json_util.c",
+  "file": "../../json_util.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/json_visit.c.o   -c ../../json_visit.c",
+  "file": "../../json_visit.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/linkhash.c.o   -c ../../linkhash.c",
+  "file": "../../linkhash.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/printbuf.c.o   -c ../../printbuf.c",
+  "file": "../../printbuf.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/random_seed.c.o   -c ../../random_seed.c",
+  "file": "../../random_seed.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -D_GNU_SOURCE -Djson_c_EXPORTS -I../.. -I../../tis/build   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -g -fPIC   -D_REENTRANT -o CMakeFiles/json-c.dir/strerror_override.c.o   -c ../../strerror_override.c",
+  "file": "../../strerror_override.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_object_iterator.dir/test_object_iterator.c.o   -c ../../tests/test_object_iterator.c",
+  "file": "../../tests/test_object_iterator.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_null.dir/test_null.c.o   -c ../../tests/test_null.c",
+  "file": "../../tests/test_null.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_cast.dir/test_cast.c.o   -c ../../tests/test_cast.c",
+  "file": "../../tests/test_cast.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_visit.dir/test_visit.c.o   -c ../../tests/test_visit.c",
+  "file": "../../tests/test_visit.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/testReplaceExisting.dir/testReplaceExisting.c.o   -c ../../tests/testReplaceExisting.c",
+  "file": "../../tests/testReplaceExisting.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_deep_copy.dir/test_deep_copy.c.o   -c ../../tests/test_deep_copy.c",
+  "file": "../../tests/test_deep_copy.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_parse_int64.dir/test_parse_int64.c.o   -c ../../tests/test_parse_int64.c",
+  "file": "../../tests/test_parse_int64.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -DTEST_FORMATTED=1 -I../../tests/PUBLIC -I../.. -I../../tis/build  -g   -o CMakeFiles/test2Formatted.dir/test2.c.o   -c ../../tests/test2.c",
+  "file": "../../tests/test2.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -DTEST_FORMATTED=1 -I../../tests/PUBLIC -I../.. -I../../tis/build  -g   -o CMakeFiles/test2Formatted.dir/parse_flags.c.o   -c ../../tests/parse_flags.c",
+  "file": "../../tests/parse_flags.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_util_file.dir/test_util_file.c.o   -c ../../tests/test_util_file.c",
+  "file": "../../tests/test_util_file.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_float.dir/test_float.c.o   -c ../../tests/test_float.c",
+  "file": "../../tests/test_float.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -DTEST_FORMATTED=1 -I../../tests/PUBLIC -I../.. -I../../tis/build  -g   -o CMakeFiles/test1Formatted.dir/test1.c.o   -c ../../tests/test1.c",
+  "file": "../../tests/test1.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc -DTEST_FORMATTED=1 -I../../tests/PUBLIC -I../.. -I../../tis/build  -g   -o CMakeFiles/test1Formatted.dir/parse_flags.c.o   -c ../../tests/parse_flags.c",
+  "file": "../../tests/parse_flags.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test2.dir/test2.c.o   -c ../../tests/test2.c",
+  "file": "../../tests/test2.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_locale.dir/test_locale.c.o   -c ../../tests/test_locale.c",
+  "file": "../../tests/test_locale.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_printbuf.dir/test_printbuf.c.o   -c ../../tests/test_printbuf.c",
+  "file": "../../tests/test_printbuf.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_charcase.dir/test_charcase.c.o   -c ../../tests/test_charcase.c",
+  "file": "../../tests/test_charcase.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_int_add.dir/test_int_add.c.o   -c ../../tests/test_int_add.c",
+  "file": "../../tests/test_int_add.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_compare.dir/test_compare.c.o   -c ../../tests/test_compare.c",
+  "file": "../../tests/test_compare.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test1.dir/test1.c.o   -c ../../tests/test1.c",
+  "file": "../../tests/test1.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test4.dir/test4.c.o   -c ../../tests/test4.c",
+  "file": "../../tests/test4.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_json_pointer.dir/test_json_pointer.c.o   -c ../../tests/test_json_pointer.c",
+  "file": "../../tests/test_json_pointer.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_double_serializer.dir/test_double_serializer.c.o   -c ../../tests/test_double_serializer.c",
+  "file": "../../tests/test_double_serializer.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_parse.dir/test_parse.c.o   -c ../../tests/test_parse.c",
+  "file": "../../tests/test_parse.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_set_serializer.dir/test_set_serializer.c.o   -c ../../tests/test_set_serializer.c",
+  "file": "../../tests/test_set_serializer.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../tests/PUBLIC -I../.. -I../../tests -I../../tis/build  -g   -o CMakeFiles/test_set_value.dir/test_set_value.c.o   -c ../../tests/test_set_value.c",
+  "file": "../../tests/test_set_value.c"
+},
+{
+  "directory": ".",
+  "command": "/usr/bin/cc  -I../../apps/PUBLIC -I../.. -I../../tis/build  -g   -o CMakeFiles/json_parse.dir/json_parse.c.o   -c ../../apps/json_parse.c",
+  "file": "../../apps/json_parse.c"
+}
+]
