@@ -134,9 +134,22 @@ fi
 # Step 3: process the tests
 #-------------------------------------------------------------------------------
 
+rm -f my_tis.config
+echo "[" >> my_tis.config
+fst_test=1
+
 for name in $test_names ; do
   config="$name.config"
   echo "Process $name"
+
+  # my_tis.config
+  if [[ $fst_test -ne 1 ]] ; then
+    echo "  }," >> my_tis.config
+  fi
+  fst_test=0
+  echo "  {" >> my_tis.config
+  echo "    \"name\": \"$name\"," >> my_tis.config
+  echo "    \"include\": \"tis/${config}_generated\"" >> my_tis.config
 
   #-----------------------------------------------------------------------------
   # Step 3a: generate the test.config_generated file from test.config
@@ -155,6 +168,10 @@ for name in $test_names ; do
   fi
 
 done
+
+echo "  }" >> my_tis.config
+echo "]" >> my_tis.config
+
 #-------------------------------------------------------------------------------
 
 # Remove stuff useless for TiS-CI
@@ -175,5 +192,6 @@ clean_stuff
 popd
 popd
 
+rm -f ./build/tis_symbols.tbl
 rm -f ./*.config_generated.json
 rm -f __vfs-*.[ch]
