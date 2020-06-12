@@ -1,0 +1,13 @@
+[
+    {
+        "compilation_database": [
+            "build"
+        ],
+        "files": [
+            "../tests/test_null.c",
+            "../json_object.c",
+            "../printbuf.c",
+            "../json_tokener.c"
+        ]
+    }
+]

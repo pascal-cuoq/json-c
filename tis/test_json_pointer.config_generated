@@ -1,0 +1,17 @@
+[
+    {
+        "compilation_database": [
+            "build"
+        ],
+        "files": [
+            "../tests/test_json_pointer.c",
+            "../json_tokener.c",
+            "../printbuf.c",
+            "../json_object.c",
+            "../linkhash.c",
+            "../arraylist.c",
+            "../json_util.c",
+            "../json_pointer.c"
+        ]
+    }
+]
