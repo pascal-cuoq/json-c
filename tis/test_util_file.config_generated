@@ -1,0 +1,35 @@
+[
+    {
+        "compilation_database": [
+            "build"
+        ],
+        "files": [
+            "../tests/test_util_file.c",
+            "../json_c_version.c",
+            "../json_util.c",
+            "../printbuf.c",
+            "../json_tokener.c",
+            "../json_object.c",
+            "../linkhash.c",
+            "../strerror_override.c"
+        ],
+        "filesystem": {
+            "files": [
+                {
+                    "from": "../tests/valid.json",
+                    "name": "./valid.json"
+                },
+                {
+                    "from": "../tests/valid_nested.json",
+                    "name": "./valid_nested.json"
+                },
+                {
+                    "name": "/dev/null"
+                }
+            ]
+        },
+        "raw_options": {
+            "-val-args": " ."
+        }
+    }
+]
