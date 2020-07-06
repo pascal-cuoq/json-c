@@ -91,7 +91,11 @@ struct json_object_string
 	// to expand the length of a string are common operations to perform.
 	union
 	{
+	#ifdef __TRUSTINSOFT_BUGFIX__
+		char idata[0]; // Immediate data.
+	#else
 		char idata[1]; // Immediate data.  Actually longer
+	#endif
 		char *pdata;   // Only when len < 0
 	} c_string;
 };
